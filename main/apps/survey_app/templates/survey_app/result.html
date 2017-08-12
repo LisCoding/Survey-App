@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Survey Info</title>
+  </head>
+  <body>
+    <p>Thank you for submiting this form! You have submitted this {{request.session.count}} times</p>
+    <h3>Submited Information</h3>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Name:</th>
+          <th>{{request.session.name}}</th>
+        </tr>
+        <tr>
+          <th>Location:</th>
+          <th>{{request.session.location}}</th>
+        </tr>
+        <tr>
+          <th>language:</th>
+          <th>{{request.session.language}}</th>
+        </tr>
+        <tr>
+          <th>Comment:</th>
+          <th>{{request.session.comment}}</th>
+        </tr>
+      </tbody>
+    </table>
+    <form class="" action="/survey/back" method="post">
+      {% csrf_token %}
+      <input type="submit" name="" value="Back">
+    </form>
+  </body>
+</html>

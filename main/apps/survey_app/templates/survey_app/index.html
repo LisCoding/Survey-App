@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Survey Dojo</title>
+  </head>
+  <body>
+    <h1>Dojo Survey</h1>
+    <form class="" action="/survey/process" method="post">
+      {% csrf_token %}
+      <label for="">Your Name</label>
+      <input type="text" name="f_name" value="">
+      <label for="">Dojo Location:</label>
+      <select class="" name="locations">
+        <option value="San Jose">San Jose</option>
+        <option value="Palo Alto">Palo Alto</option>
+        <option value="Seattle">Seattle</option>
+        <option value="Phonix">Phonix</option>
+      </select>
+      <label for="">Favorite Languge:</label>
+      <select class="" name="leng">
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+        <option value="Ruby">Ruby</option>
+        <option value="C#">C#</option>
+      </select>
+      <p>Coment</p>
+      <textarea name="comment" value=""></textarea>
+      <input type="submit" name="" value="Submit">
+    </form>
+  </body>
+</html>
